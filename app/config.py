@@ -1,7 +1,15 @@
+import os
 class Config:
-   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://lilibeth:1234@localhost/tech'
+   
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
  
 class ProdConfig:
+    #SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     pass
 class DevConfig:
-    pass
+    DEBUG = True
+config_options={
+'development':DevConfig,
+'production':ProdConfig
+
+}
