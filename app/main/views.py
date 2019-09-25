@@ -1,3 +1,4 @@
+
 from flask import render_template
 from . import main
 
@@ -13,3 +14,4 @@ def index():
 @main.route('motive')
 def motive():
     return render_template("motive.html")
+
